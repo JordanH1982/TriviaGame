@@ -1,4 +1,4 @@
-// Shout out to google, other students and github...
+// I had some help to finish this and make it really pretty. 
 $(document).ready(function () {
     var options = [
         {
@@ -108,7 +108,7 @@ $(document).ready(function () {
         index = Math.floor(Math.random()*options.length);
         pick = options[index];
     
-    //	neat little google code nab that makes sure the game chooses questions not already shown in the game
+    //makes sure the game chooses questions not already shown in the game (had help on this one)
             $("#questionblock").html("<h2>" + pick.question + "</h2>");
             for(var i = 0; i < pick.choice.length; i++) {
                 var userChoice = $("<div>");
@@ -149,7 +149,7 @@ $(document).ready(function () {
     function hidepicture () {
         $("#answerblock").append("<img src=" + pick.photo + ">");
         newArray.push(pick);
-        options.splice(index,1); //thank you github
+        options.splice(index,1); //had some help here too
     
         var hidpic = setTimeout(function() {
             $("#answerblock").empty();
